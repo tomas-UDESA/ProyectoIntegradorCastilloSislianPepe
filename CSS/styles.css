@@ -16,6 +16,20 @@ li {
     list-style: none;
 }
 
+.user {
+    background-color: rgb(254, 178, 110);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.userlog {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin-right: 2%;
+    padding-top: 12px;
+}
+
 header {
     display: flex;
     justify-content: space-between;
