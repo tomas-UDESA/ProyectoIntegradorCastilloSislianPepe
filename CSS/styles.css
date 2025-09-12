@@ -1,0 +1,59 @@
+/* Index */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headindex {
+    background-color: rgb(254, 178, 110);
+}
+
+.logo {
+    width: 5vw;
+    margin-left: 2%;
+}
+
+.navhead {
+    width: 40%;
+}
+
+.ulhead {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 115%;
+    padding: 0;
+    font-weight: bold;
+}
+
+.lihead {
+    color: rgb(45, 45, 45);
+}
+
+.searchbar {
+    background-color: rgba(255, 255, 255, 0.508);
+    width: 12vw;
+    height: 3vh;
+    border: 0;
+    border-radius: 20px;
+    padding: 19px;
+    margin-right: 1vh;
+
+}
