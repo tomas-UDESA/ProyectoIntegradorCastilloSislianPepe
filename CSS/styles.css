@@ -159,3 +159,77 @@ footer {
     font-weight: bold;
     padding: 20px;
 }
+
+@media (max-width: 426px) {
+    header {
+        flex-direction: column;
+    }
+
+    .userlog {
+        font-size: 80%;
+
+    }
+
+    .logo {
+        width: 21vw;
+    }
+
+    .navhead {
+        width: 100%;
+    }
+
+    .ulhead {
+        font-size: 100%;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .searchbar {
+        width: 38vw;
+        margin-bottom: 11px;
+    }
+
+    .bannerindex {
+        height: 45vh;
+    }
+
+    .hcate {
+        font-size: 8vw;
+    }
+
+    .categoriasindex {
+        flex-wrap: wrap;
+    }
+
+    .divcate {
+        max-width: 39vw;
+        padding: 0%;
+        margin: 6px;
+    }
+
+    .produim {
+        width: 37vw;
+    }
+
+    .produtit {
+        margin-left: 7px;
+    }
+
+    .produdes {
+        margin-left: 7px;
+    }
+
+    .produprec {
+        margin-left: 7px;
+    }
+
+    .produinfo {
+        width: 65%;
+        margin-bottom: 11px;
+        margin-left: 7px;
+    }
+
+    .footul {
+        font-size: 12px;
+    }
+}
