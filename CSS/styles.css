@@ -340,3 +340,41 @@ footer {
         max-width: 24%;
     }
 }
+
+/* Sucursales */
+
+.titsucu {
+    margin-left: 5%;
+    margin-top: 0;
+}
+
+.sucumapa {
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.suculi {
+    margin-left: 3%;
+    font-size: 120%;
+    font-family: arial;
+}
+
+.footersucu {
+    margin-top: 0;
+}
+
+.suculfoot {
+    margin-top: 0;
+}
+
+.sucusec {
+    padding-top: 5%;
+    padding-bottom: 19%;
+}
+
+@media (max-width: 426px) {
+    .sucusec {
+        padding-bottom: 48%;
+    }
+}
