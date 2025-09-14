@@ -295,3 +295,48 @@ footer {
     width: 13vw;
     border-radius: 20px;
 }
+
+@media (max-width: 426px) {
+    .divcate {
+        max-width: 30vw;
+        padding: 0%;
+        margin: 6px;
+        justify-content: none;
+    }
+
+    .cateprod {
+    margin-right: 6%;
+    margin-bottom: 3%;
+    height: 37vh;
+    }
+
+    .produim {
+        width: 29vw;
+    }
+
+    .produtit {
+        margin-left: 7px;
+        font-size: 110%;
+    }
+
+    .produdes {
+        margin-left: 7px;
+        font-size: 72%;
+    }
+
+    .produprec {
+        margin-left: 7px;
+        font-size: 81%;
+    }
+
+    .produinfo {
+        width: 51%;
+        margin-bottom: 11px;
+        margin-left: 7px;
+        font-size: 49%;
+    }
+
+    .categorynav {
+        max-width: 24%;
+    }
+}
