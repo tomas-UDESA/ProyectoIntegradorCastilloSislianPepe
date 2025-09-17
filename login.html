@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>JAPANESE</title>
+</head>
+<body>
+     <div class="user">
+            <a href="./login.html" class="userlog">LogIn</a>
+            <a href="./register.html" class="userlog">Register</a>
+        </div>
+     <header class="headindex">
+         <a href="./index.html"><img src="./img/logo.png" alt="logohead" class="logo"></a>
+         <nav class="navhead">
+             <ul class="ulhead">
+                 <li><a href="./index.html" class="lihead">Inicio</a></li>
+                 <li><a href="./category.html" class="lihead">Productos</a></li>
+                 <li><a href="./sucursales.html" class="lihead">Sucursales</a></li>
+                 <li><a href="./" class="lihead">Contactanos</a></li>
+             </ul>
+         </nav>
+         <form action="resultados.html" method="GET" class="searchbarform">
+            <input type="text" name="buscar" placeholder="Buscar..." required class="searchbar">
+        </form>
+    </header>
+    <section>
+             <form action="./index.html" method="get">
+                 <div>
+                     <label for="email">Escriba su email:</label>
+                     <input id="email" name="email" value=" " required>
+                 </div>
+                 <div>
+                     <label for="contraseña">Escriba su contraseña</label>
+                     <input id="contraseña" name="contraseña" value=" " required>
+                 </div>
+                 <div>
+                     <button type="button">Ingresar</button>
+                 </div>
+                     <span><a href="./register.html">No tengo una cuenta</a></span>
+             </form>
+     </section>
+</body>
+</html>
