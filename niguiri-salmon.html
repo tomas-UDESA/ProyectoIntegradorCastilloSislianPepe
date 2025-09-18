@@ -6,68 +6,85 @@
     <title>JAPANESE</title>
     <link rel="stylesheet" href="./CSS/styles.css"
 </head>
-
 <body>
-    <header class="header reviews-nigiris">
-        <a href="index.html">Volver a el Inicio</a>
+    <div class="user">
+            <a href="./login.html" class="userlog">LogIn</a>
+            <a href="./register.html" class="userlog">Register</a>
+        </div>
+    <header class="headindex">
+        <a href="./index.html"><img src="./img/logo.png" alt="logohead" class="logo"></a>
+        <nav class="navhead">
+            <ul class="ulhead">
+                <li><a href="./index.html" class="lihead">Inicio</a></li>
+                <li><a href="./category.html" class="lihead">Productos</a></li>
+                <li><a href="./sucursales.html" class="lihead">Sucursales</a></li>
+                <li><a href="" class="lihead">Contactanos</a></li>
+            </ul>
+        </nav>
+        <form action="resultados.html" method="GET" class="searchbarform">
+            <input type="text" name="buscar" placeholder="Buscar..." required class="searchbar">
+        </form>
     </header>
-<section class="Producto">
-    <h1>Niguiri de Salmon</h1>
+    <span><a href="./index.html">Volver al incio.</a></span>
+    
+    <span><h1 class="detalletit">Niguiri de Salmon</h1></span>
+
+<section class="sectiondetalle">
+    <div class="divimagedetalle">
+        <img src="./img/niguiri-salmon.png" alt="Niguiri de Salmon" class="imgdetalle">
+    </div>
+
+    <div class="descdetalle">
+        <h2 class="desctit">Detalles del producto:</h2>
+
+        <ul class="uldetalles">
+            <li class="lidetalle"><b>Marca:</b> Japanese Food</li>
+            <li class="lidetalle"><b>Descripcion:</b> Un delicado bocado de arroz avinagrado moldeado a mano, coronado con una fina lámina de salmón fresco, de textura suave y sabor untuoso. La simplicidad de su preparación resalta la calidad del pescado, que aporta notas suaves y ligeramente dulces, equilibradas por la frescura del arroz. Cada pieza es una combinación armónica de suavidad, frescura y tradición japonesa, pensada para disfrutarse en un solo bocado </li>
+            <li class="lidetalle"><b>Precio:</b> $3.200</li>
+            <li class="lidetalle"><b>Categoria:</b><a href="category-niguiris.html" class="detallea"> Nigiris</a></li>
+            <li class="lidetalle"><b>Stock:</b> Nuestro stock es de 50 piezas por orden.</li>
+        </ul>
+    </div>
 </section>
 
-<article class="foto-niguiri-datos"> 
-    <img src="img/niguiri-salmon.png" alt="Niguiri de Salmon">
-</article>
-
-<article class="datos">
-<h2>Detalles del producto:</h2>
-<li>Marca:Japanese Food</li>
-<li>Descripcion:Un delicado bocado de arroz avinagrado moldeado a mano, coronado con una fina lámina de salmón fresco, de textura suave y sabor untuoso. La simplicidad de su preparación resalta la calidad del pescado, que aporta notas suaves y ligeramente dulces, equilibradas por la frescura del arroz. Cada pieza es una combinación armónica de suavidad, frescura y tradición japonesa, pensada para disfrutarse en un solo bocado </li>
-<li>Precio: 3200,00 $</li>
-<li>Categoria:<a href="category-niguiris.html">Nigiris</a></li>
-<li>Stock: Nuestro stock es de 50 piezas por orden.</li>
-</ul>
-</article>
-
-
-<div class="Tags" > 
-<h3>Tags</h3>
-<ul class="Tags">
-<li>#Fresco</li>
-<li>#Pescado</li>
-<li>#Clasico</li>
-</ul>
+<div class="detalletags" > 
+    <h3 class="tagstit">Tags</h3>
+        <ul class="ultags">
+            <li>#Fresco</li>
+            <li>#Pescado</li>
+            <li>#Clasico</li>
+        </ul>
 </div>
 
 
-
-<div class="comentario-usuarioregis"> 
-<h4>Deja tu comentario</h4> 
-<ul>
- <form action="reviews-nigiris.html" method="get"> 
-    <li>cual es tu nombre de usuario?:</li>
-<label for="nombre"></label>
-<input id="usuario" type="text" name="usuario" value="" placeholder="usuario">
-<button type="submit">
-</button>
-<button type="reset">
-</button>
-</form>
+<div class="comentariodetalles"> 
+    <h4>Deja tu comentario</h4> 
+    <label for="usuario">Nombre de usuario</label>
+    <form action="reviews-nigiris.html" method="get"> 
+    <input id="usuario" type="text" name="usuario" value="" placeholder="usuario" class="detalleinput">
+    <button type="submit">Enviar</button>
+    <button type="reset">Borrar todo</button>
+    </form>
 </div>
 
-<div class="comentarios ">
-<ul>
-<form action="reviews-nigiris.html" method="get">
-<li> Que te gustaria comentarnos:</li>
-<input type="Desea agregar algun comentario acerca el nigiri de Salmon" name="comentario" value="" placeholder="comentario">
-<button type="submit">
-</button>
-<button type="reset">
-</button>
+
+<div class="reviewsdetalle">
+<label for="comentario">Comentario</label>  
+<form action="reviews-nigiris.html" method="get"> 
+<input type="text" name="comentario" value="" placeholder="comentario" class="detalleinput">
+<button type="submit">Enviar</button>
+<button type="reset">Borrar todo</button>
 </form>
 </div>
 
 
-</ul>
+    <footer>
+        <ul class="footul">
+            <li>Castillo Ramos, Tomas</li>
+            <li>Sislian, Maximo</li>
+            <li>Pepe, Bautista</li>
+        </ul>
+    </footer
+
 </body> 
 </html>

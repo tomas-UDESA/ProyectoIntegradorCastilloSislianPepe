@@ -379,16 +379,84 @@ footer {
     }
 }
 
-.header.reviews-nigiris {
-    background-color: rgb(254, 178, 110);
-    border-bottom: 2% solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Detalle */
+.detalletit {
+    margin-left: 5%;
     font-family: Arial, Helvetica, sans-serif;
-    height: 90px;
-    font-size: 60px;
+}
 
+.sectiondetalle {
+    display: flex;
+    margin-left: 5%;
+    background-color: #00000040;
+    padding: 87px;
+    padding-right: 0;
+    margin-right: 5%;
+    border-radius: 20px;
+}
 
+.detallea {
+    color: black;
+}
 
+.imgdetalle {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.desctit {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 4%;
+    margin-top: 0;
+}
+
+.descdetalle {
+    height: 20vh;
+}
+
+.uldetalles {
+    display: flex;
+    flex-direction: column;
+    height: 152%;
+    justify-content: space-between;
+    max-width: 69%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.detalletags {
+}
+
+.tagstit {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin-left: 5%;
+}
+
+.ultags {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    padding: 0;
+    margin-bottom: 3%;
+}
+
+.comentariodetalles {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+.reviewsdetalle {
+    margin-left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.detalleinput {
+    background-color: rgba(50, 50, 50, 0.286);
+    width: 7vw;
+    height: 3vh;
+    border: 0;
+    border-radius: 20px;
+    padding: 19px;
+    margin-right: 1vh;
 }
