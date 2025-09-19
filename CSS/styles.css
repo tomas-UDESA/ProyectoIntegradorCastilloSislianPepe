@@ -21,13 +21,14 @@ li {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-right: 2%;
 }
 
 .userlog {
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    margin-right: 2%;
-    padding-top: 12px;
+    font-weight: bold;
+    margin-right: 31%;
 }
 
 header {
@@ -46,23 +47,6 @@ header {
     margin-left: 2%;
 }
 
-.navhead {
-    width: 40%;
-}
-
-.ulhead {
-    display: flex;
-    justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 115%;
-    padding: 0;
-    font-weight: bold;
-}
-
-.lihead {
-    color: rgb(45, 45, 45);
-}
-
 .searchbar {
     background-color: rgba(255, 255, 255, 0.508);
     width: 12vw;
@@ -74,6 +58,15 @@ header {
 
 }
 
+.indbutton {
+    padding: 6px;
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: rgba(255, 255, 255, 0.665);
+    border: solid 2px rgba(0, 0, 0, 0.487);
+    border-radius: 10px;
+}
+
 .bannerindex {
     width: 100%;
     height: 80vh;
@@ -82,6 +75,7 @@ header {
 .categoriasindex {
     background-color: rgba(0, 0, 0, 0.381);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 5%;
     padding-top: 2%;
@@ -89,6 +83,11 @@ header {
     margin-left: 3%;
     margin-right: 3%;
     border-radius: 20px;
+}
+
+.indexbody {
+    display: flex;
+    flex-direction: column;
 }
 
 .hcate {
@@ -158,6 +157,7 @@ footer {
     font-size: 20px;
     font-weight: bold;
     padding: 20px;
+    margin-top: 0;
 }
 
 @media (max-width: 426px) {
@@ -338,44 +338,6 @@ footer {
 
     .categorynav {
         max-width: 24%;
-    }
-}
-
-/* Sucursales */
-
-.titsucu {
-    margin-left: 5%;
-    margin-top: 0;
-}
-
-.sucumapa {
-    margin-right: 5%;
-    margin-left: 5%;
-    width: 90%;
-}
-
-.suculi {
-    margin-left: 3%;
-    font-size: 120%;
-    font-family: arial;
-}
-
-.footersucu {
-    margin-top: 0;
-}
-
-.suculfoot {
-    margin-top: 0;
-}
-
-.sucusec {
-    padding-top: 5%;
-    padding-bottom: 19%;
-}
-
-@media (max-width: 426px) {
-    .sucusec {
-        padding-bottom: 48%;
     }
 }
 
