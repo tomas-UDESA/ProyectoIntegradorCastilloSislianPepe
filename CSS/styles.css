@@ -85,6 +85,15 @@ header {
     border-radius: 20px;
 }
 
+.searchprodu {
+    width: 75vw;
+    height: 80vh;
+}
+
+.sin_resultados {
+    display: none;
+}
+
 .indexbody {
     display: flex;
     flex-direction: column;
@@ -275,9 +284,9 @@ footer {
 }
 
 .cateprod {
-    margin-right: 6%;
-    margin-bottom: 3%;
-    height: 45vh;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    height: 469px;
 }
 
 .footcate {
