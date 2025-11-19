@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (errorEl) errorEl.textContent = "";
 
-        var email = emailInput ? emailInput.value.trim() : "";
-        var password = passwordInput ? passwordInput.value : "";
+        let email = emailInput ? emailInput.value.trim() : "";
+        let password = passwordInput ? passwordInput.value : "";
 
         if (!email) {
             if (errorEl) errorEl.textContent = "El email es obligatorio.";

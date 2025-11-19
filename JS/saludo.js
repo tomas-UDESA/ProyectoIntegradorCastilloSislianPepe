@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var email;
+    let email;
     try {
         email = localStorage.getItem("userEmail");
     } catch (err) {
@@ -8,17 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!email) return;
 
-    var userList = document.querySelector(".user");
+    let userList = document.querySelector(".user");
     if (!userList) return;
 
     userList.innerHTML = "";
 
-    var liBien = document.createElement("li");
+    let liBien = document.createElement("li");
     liBien.className = "userwelcome";
     liBien.textContent = "Bienvenido: " + email;
 
-    var liLogout = document.createElement("li");
-    var aLogout = document.createElement("a");
+    let liLogout = document.createElement("li");
+    let aLogout = document.createElement("a");
     aLogout.href = "#";
     aLogout.textContent = "logout";
     aLogout.className = "userlog";
