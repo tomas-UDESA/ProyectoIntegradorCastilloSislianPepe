@@ -331,6 +331,23 @@ footer {
     border-radius: 20px;
 }
 
+    .errorlogin {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 0;
+    }
+
+    .userwelcome {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    }
+
 /* Search */
 .searchprodu {
     height: 110vh;
@@ -354,6 +371,7 @@ footer {
     .userlog {
         font-size: 14px;
         margin-bottom: 10px;
+        margin-left: 5px;
     }
 
     .logo {

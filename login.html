@@ -10,7 +10,7 @@
     <header class="headindex">
          <a href="./index.html"><img src="./img/logo.png" alt="logohead" class="logo"></a>
          <form action="./search-results.html" method="GET" class="searchbarform">
-            <input type="text" name="buscar" placeholder="Buscar..." required class="searchbar">
+            <input type="text" name="buscar" placeholder="Buscar." class="searchbar">
             <button class="indbutton" type="submit">Buscar</button>
          </form>
          <nav>
@@ -20,23 +20,26 @@
             </ul>
          </nav>
     </header>
+
     <section class="usersec">
-             <form action="./index.html" method="get" class="form_user">
-                <h1>Ingrese su sesion.</h1>
-                 <div>
-                     <label for="email">Escriba su email:</label>
-                     <input class="inputregi" type="email" id="email" name="email" value="" placeholder="Escriba un mail existente" required>
-                 </div>
-                 <div>
-                     <label for="contraseña">Escriba su contraseña</label>
-                     <input class="inputregi" type="password" id="contraseña" name="" value="" placeholder="Escriba su contraseña" required>
-                 </div>
-                 <div>
-                     <button class="buttonregi" type="button">Ingresar</button>
-                 </div>
-                     <a href="./register.html" class="acolor">NO TENGO UNA CUENTA</a>
-             </form>
-     </section>
+        <form action="./index.html" method="get" class="form_user" novalidate>
+            <h1>Ingrese su sesion.</h1>
+            <div>
+                <label for="email">Escriba su email:</label>
+                <input class="inputregi" type="email" id="email" name="email" placeholder="Escriba un mail existente">
+            </div>
+            <div>
+                <label for="contraseña">Escriba su contraseña</label>
+                <input class="inputregi" type="password" id="contraseña" name="contraseña" placeholder="Escriba su contraseña">
+            </div>
+            <p class="errorlogin" id="login-error"></p>
+            <div>
+                <button class="buttonregi" type="submit">Ingresar</button>
+            </div>
+            <a href="./register.html" class="acolor">No tengo cuenta</a>
+        </form>
+    </section>
+
     <footer>
         <ul class="footul">
             <li>Castillo Ramos, Tomas</li>
@@ -44,6 +47,8 @@
             <li>Pepe, Bautista</li>
         </ul>
     </footer>
-    <script src="./JS/index.js"></script>
+
+    <script src="./JS/saludo.js"></script>
+    <script src="./JS/login.js"></script>
 </body>
 </html>

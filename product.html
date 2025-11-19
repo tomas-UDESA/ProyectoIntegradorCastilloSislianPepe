@@ -7,75 +7,72 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-     <header class="headindex">
-         <a href="./index.html"><img src="./img/logo.png" alt="logohead" class="logo"></a>
-         <form action="./search-results.html" method="GET" class="searchbarform">
-            <input type="text" name="buscar" placeholder="Buscar..." required class="searchbar">
+    <header class="headindex">
+        <a href="./index.html"><img src="./img/logo.png" alt="logohead" class="logo"></a>
+        <form action="./search-results.html" method="GET" class="searchbarform">
+            <input type="text" name="buscar" placeholder="Buscar..." class="searchbar">
             <button class="indbutton" type="submit">Buscar</button>
-         </form>
-         <nav>
+        </form>
+        <nav>
             <ul class="user">
-            <li><a href="./login.html" class="userlog">LogIn</a></li>
-            <li><a href="./register.html" class="userlog">Register</a></li>
+                <li><a href="./login.html" class="userlog">LogIn</a></li>
+                <li><a href="./register.html" class="userlog">Register</a></li>
             </ul>
-         </nav>
+        </nav>
     </header>
-<div class="categorysec">
+
+    <div class="categorysec">
         <aside class="categorynav">
             <ul class="categoryul">
                 <li class="categorili"><a href="./category.html" class="categorya">Entradas</a></li>
-                <li class="categorili"><a href="./category.html" class="categorya" >Nigiris</a></li>
+                <li class="categorili"><a href="./category.html" class="categorya">Nigiris</a></li>
                 <li class="categorili"><a href="./category.html" class="categorya">Tablas</a></li>
                 <li class="categorili"><a href="./category.html" class="categorya">Postres</a></li>
             </ul>
         </aside>
- <div class="indexbody">
-    <span><h1 class="detalletit">Niguiri de Salmon</h1></span>
- <section class="sectiondetalle">
-    <div class="divimagedetalle">
-        <img src="./img/niguiri-salmon.png" alt="Niguiri de Salmon" class="imgdetalle">
-    </div>
 
-    <div class="descdetalle">
-        <h2 class="desctit">Detalles del producto:</h2>
+        <div class="indexbody">
+            <h1 class="detalletit" id="product-name"></h1>
 
-        <ul class="uldetalles">
-            <li class="lidetalle"><b>Marca:</b> Japanese Food</li>
-            <li class="lidetalle"><b>Valoracion:</b> 5/5</li>
-            <li class="lidetalle"><b>Descripcion:</b> Un delicado bocado de arroz avinagrado moldeado a mano, coronado con una fina lámina de salmón fresco, de textura suave y sabor untuoso. La simplicidad de su preparación resalta la calidad del pescado, que aporta notas suaves y ligeramente dulces, equilibradas por la frescura del arroz. Cada pieza es una combinación armónica de suavidad, frescura y tradición japonesa, pensada para disfrutarse en un solo bocado </li>
-            <li class="lidetalle"><b>Precio:</b> $3.200 c/u</li>
-            <li class="lidetalle"><b>Categoria:</b><a href="category.html" class="detallea"> Nigiris</a></li>
-            <li class="lidetalle"><b>Stock:</b> Nuestro stock es de 50 piezas por orden.</li>
-        </ul>
+            <section class="sectiondetalle">
+                <div class="divimagedetalle">
+                    <img src="" alt="" class="imgdetalle" id="product-image">
+                </div>
+
+                <div class="descdetalle">
+                    <h2 class="desctit">Detalles del producto:</h2>
+
+                    <ul class="uldetalles">
+                        <li class="lidetalle"><b>Marca:</b> <span id="product-brand"></span></li>
+
+                        <li class="lidetalle"><b>Descripción:</b> <span id="product-description"></span></li>
+
+                        <li class="lidetalle"><b>Precio:</b> <span id="product-price"></span></li>
+
+                        <li class="lidetalle">
+                            <b>Categoría:</b>
+                            <a href="./category.html" class="detallea" id="product-category-link"></a>
+                        </li>
+
+                        <li class="lidetalle"><b>Stock:</b> <span id="product-stock"></span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="detalletags">
+                <h3 class="tagstit">Tags</h3>
+                <ul class="ultags" id="product-tags">
+                </ul>
+            </div>
+
+            <div class="comentariodetalles">
+                <h3>Comentarios de usuarios</h3>
+            </div>
+
+            <div class="reviewsdetalle" id="reviews-container">
+            </div>
+        </div>
     </div>
- </section>
-    <div class="detalletags" > 
-        <h3 class="tagstit">Tags</h3>
-        <ul class="ultags">
-            <li>#Fresco</li>
-            <li>#Pescado</li>
-            <li>#Clasico</li>
-        </ul>
-    </div>
-    <div class="comentariodetalles"> 
-            <h4>Deja tu comentario</h4> 
-            <label for="usuario">Nombre de usuario</label>
-        <form action="" method="get"> 
-            <input id="usuario" type="text" name="usuario" value="" placeholder="usuario" class="detalleinput">
-            <button type="submit">Enviar</button>
-            <button type="reset">Borrar todo</button>
-        </form>
-    </div>
-    <div class="reviewsdetalle">
-            <label for="comentario">Comentario</label>  
-        <form action="" method="get"> 
-            <input type="text" name="comentario" value="" placeholder="comentario" class="detalleinput">
-            <button type="submit">Enviar</button>
-            <button type="reset">Borrar todo</button>
-        </form>
-    </div>
- </div>
-</div>
 
     <footer>
         <ul class="footul">
@@ -84,6 +81,8 @@
             <li>Pepe, Bautista</li>
         </ul>
     </footer>
+
     <script src="./JS/index.js"></script>
-</body> 
+    <script src="./JS/product.js"></script>
+</body>
 </html>

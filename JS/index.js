@@ -49,7 +49,7 @@ if (secciones.length >= 2) {
                         '<p class="produtit">' + p.title + '</p>' +
                         '<p class="produdes">' + p.description + '</p>' +
                         '<p class="produprec">$' + p.price + '</p>' +
-                        '<a href="./product.html" class="produinfo">Ver detalle.</a>' +
+                        '<a href="./product.html?id=${producto.id}" class="produinfo">Ver detalle.</a>' +
                     '</div>';
 
                 primeraSeccion.innerHTML += tarjeta;
@@ -77,7 +77,7 @@ if (secciones.length >= 2) {
                         '<p class="produtit">' + p.title + '</p>' +
                         '<p class="produdes">' + p.description + '</p>' +
                         '<p class="produprec">$' + p.price + '</p>' +
-                        '<a href="./product.html" class="produinfo">Ver detalle.</a>' +
+                        '<a href="./product.html?id=${producto.id}" class="produinfo">Ver detalle.</a>' +
                     '</div>';
 
                 segundaSeccion.innerHTML += tarjeta;
