@@ -59,4 +59,26 @@ if (segundaSeccion) {
         .catch(function (error) {
             console.log("Error en groceries:", error);
         });
+
+
+let categorias = document.querySelector(".categoryul");
+
+fetch("https://dummyjson.com/products/categories")
+  .then(function(res) {
+    return res.json();
+  })
+  .then(function(data) {
+    let categoriasApi = '';
+
+    for (let i = 0; i < data.length; i++) {
+      categoriasApi += `<li><a href="./category.html?name=${data[i].slug}">${data[i].name}</a></li>`;
+    }
+
+    categorias.innerHTML = categoriasApi;
+  })
+  .catch(function(error) {
+    console.log("Error: " + error);
+  });
+  
+
 }
