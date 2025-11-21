@@ -1,3 +1,22 @@
+// Menos 3 caracteres
+
+let formulario = document.getElementById("searchForm");
+let campoBusqueda = document.getElementById("searchbar");
+
+formulario.addEventListener("submit", function(event) {
+    let texto = campoBusqueda.value.trim();
+
+    if (texto === "") {
+        event.preventDefault();
+        alert("El campo de búsqueda no puede estar vacío.");
+    } else if (texto.length < 3) {
+        event.preventDefault();
+        alert("El término buscado debe tener al menos 3 caracteres.");
+    }
+});
+
+// Busqueda
+
 document.addEventListener("DOMContentLoaded", function () {
     let params = new URLSearchParams(window.location.search);
     let termino = params.get("buscar") || params.get("busqueda") || "";
