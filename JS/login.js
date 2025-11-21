@@ -1,38 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let form = document.querySelector(".form_user");
-    if (!form) return;
-
+    let loginForm = document.getElementById("loginForm");
     let emailInput = document.getElementById("email");
     let passwordInput = document.getElementById("contraseña");
-    let errorEl = document.getElementById("login-error");
+    let errorEmail = document.getElementById("errorEmail");
+    let errorPassword = document.getElementById("errorPassword");
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+    loginForm.addEventListener("submit", function (event) {
+        let email = emailInput.value.trim();
+        let password = passwordInput.value;
 
-        if (errorEl) errorEl.textContent = "";
+        errorEmail.innerText = "";
+        errorPassword.innerText = "";
 
-        let email = emailInput ? emailInput.value.trim() : "";
-        let password = passwordInput ? passwordInput.value : "";
-
-        if (!email) {
-            if (errorEl) errorEl.textContent = "El email es obligatorio.";
-            return;
+        let hayError = false;
+        if (email === "") {
+            errorEmail.innerText = "El email es obligatorio";
+            hayError = true;
         }
-
-        if (!password) {
-            if (errorEl) errorEl.textContent = "La contraseña es obligatoria.";
-            return;
+        else if (password === "") {
+            errorPassword.innerText = "La contraseña es obligatoria";
+            hayError = true;
         }
-
-        if (password.length < 6) {
-            if (errorEl) errorEl.textContent = "La contraseña debe tener al menos 6 caracteres.";
-            return;
+        else if (password.length < 6) {
+            errorPassword.innerText = "La contraseña debe tener al menos 6 caracteres";
+            hayError = true;
         }
-
-        try {
+        if (hayError) {
+            event.preventDefault();
+        } else {
             localStorage.setItem("userEmail", email);
-        } catch (err) {}
-
-        window.location.href = "./index.html";
+        }
     });
 });

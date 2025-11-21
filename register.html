@@ -21,39 +21,41 @@
          </nav>
     </header>
 
-    <section class="usersec">
-        <form action="./login.html" method="get" class="form_user" id="register-form" novalidate>
-            <h1>Regístrese.</h1>
+<section class="usersec">
+    <form action="./login.html" method="get" class="form_user" id="registerForm">
+        <h1>Regístrese.</h1>
 
-            <div>
-                <label for="reg-email">Escriba un mail existente</label>
-                <input class="inputregi" type="email" id="reg-email" name="email" placeholder="Escriba un mail existente">
-            </div>
+        <div>
+            <label for="reg-email">Escriba un mail existente</label>
+            <input class="inputregi" type="email" id="reg-email" name="email" placeholder="Escriba un mail existente">
+        </div>
+        <p class="errorlogin" id="errorEmail"></p>
 
-            <div>
-                <label for="reg-password">Nueva contraseña</label>
-                <input class="inputregi" type="password" id="reg-password" name="password" placeholder="Nueva contraseña">
-            </div>
+        <div>
+            <label for="reg-password">Nueva contraseña</label>
+            <input class="inputregi" type="password" id="reg-password" name="password" placeholder="Nueva contraseña">
+        </div>
+        <p class="errorlogin" id="errorPassword"></p>
 
-            <div>
-                <label for="reg-password2">Reescriba su contraseña</label>
-                <input class="inputregi" type="password" id="reg-password2" name="password2" placeholder="Reescriba su contraseña">
-            </div>
+        <div>
+            <label for="reg-password2">Reescriba su contraseña</label>
+            <input class="inputregi" type="password" id="reg-password2" name="password2" placeholder="Reescriba su contraseña">
+        </div>
+        <p class="errorlogin" id="errorPassword2"></p>
 
-            <p class="errorlogin" id="register-error"></p>
+        <div>
+            <input type="checkbox" id="reg-terms" name="terms">
+            <label for="reg-terms">Acepto términos y condiciones.</label>
+        </div>
+        <p class="errorlogin" id="errorTerms"></p>
 
-            <div>
-                <input type="checkbox" id="reg-terms" name="terms">
-                <label for="reg-terms">Acepto términos y condiciones.</label>
-            </div>
+        <div>
+            <button class="buttonregi" type="submit">Registrarme</button>
+        </div>
 
-            <div>
-                <button class="buttonregi" type="submit">Registrarme</button>
-            </div>
-
-            <a href="./login.html" class="acolor">Ya tengo una cuenta</a>
-        </form>
-    </section>
+        <a href="./login.html" class="acolor">Ya tengo una cuenta</a>
+    </form>
+</section>
 
     <footer>
         <ul class="footul">

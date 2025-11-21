@@ -1,38 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let email;
-    try {
-        email = localStorage.getItem("userEmail");
-    } catch (err) {
-        email = null;
+    let email = localStorage.getItem("userEmail");
+
+    let sinEmail = document.getElementById("sinEmail");
+    let conEmail = document.getElementById("conEmail");
+    let saludo = document.getElementById("saludo");
+    let logOut = document.getElementById("logOut");
+
+    if (email === null || email === "") {
+        sinEmail.style.display = "block";
+        conEmail.style.display = "none";
+    } else {
+        sinEmail.style.display = "none";
+        conEmail.style.display = "block";
+
+        saludo.textContent = "Bienvenido: " + email;
     }
-
-    if (!email) return;
-
-    let userList = document.querySelector(".user");
-    if (!userList) return;
-
-    userList.innerHTML = "";
-
-    let liBien = document.createElement("li");
-    liBien.className = "userwelcome";
-    liBien.textContent = "Bienvenido: " + email;
-
-    let liLogout = document.createElement("li");
-    let aLogout = document.createElement("a");
-    aLogout.href = "#";
-    aLogout.textContent = "logout";
-    aLogout.className = "userlog";
-    aLogout.id = "logout-link";
-
-    liLogout.appendChild(aLogout);
-    userList.appendChild(liBien);
-    userList.appendChild(liLogout);
-
-    aLogout.addEventListener("click", function (e) {
-        e.preventDefault();
-        try {
-            localStorage.removeItem("userEmail");
-        } catch (err) {}
-        window.location.href = "./index.html";
-    });
 });

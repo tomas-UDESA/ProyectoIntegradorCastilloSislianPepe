@@ -1,41 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let form = document.getElementById("register-form");
-    if (!form) return;
+    let registerForm = document.getElementById("registerForm");
 
     let emailInput = document.getElementById("reg-email");
-    let passInput = document.getElementById("reg-password");
-    let pass2Input = document.getElementById("reg-password2");
-    let errorEl = document.getElementById("register-error");
+    let passwordInput = document.getElementById("reg-password");
+    let password2Input = document.getElementById("reg-password2");
+    let termsInput = document.getElementById("reg-terms");
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+    let errorEmail = document.getElementById("errorEmail");
+    let errorPassword = document.getElementById("errorPassword");
+    let errorPassword2 = document.getElementById("errorPassword2");
+    let errorTerms = document.getElementById("errorTerms");
 
-        if (errorEl) errorEl.textContent = "";
+    registerForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let email = emailInput.value.trim();
+        let password = passwordInput.value;
+        let password2 = password2Input.value;
 
-        let email = emailInput ? emailInput.value.trim() : "";
-        let pass = passInput ? passInput.value : "";
-        let pass2 = pass2Input ? pass2Input.value : "";
+        errorEmail.innerText = "";
+        errorPassword.innerText = "";
+        errorPassword2.innerText = "";
+        errorTerms.innerText = "";
 
-        if (!email) {
-            if (errorEl) errorEl.textContent = "El email es obligatorio.";
-            return;
+        let hayError = false;
+
+        if (email === "") {
+            errorEmail.innerText = "El email es obligatorio";
+            hayError = true;
+        }
+        else if (password === "") {
+            errorPassword.innerText = "La contraseña es obligatoria";
+            hayError = true;
+        }
+        else if (password.length < 6) {
+            errorPassword.innerText = "La contraseña debe tener al menos 6 caracteres";
+            hayError = true;
+        }
+        else if (password2 === "") {
+            errorPassword2.innerText = "Debe reescribir la contraseña";
+            hayError = true;
+        }
+        else if (password !== password2) {
+            errorPassword2.innerText = "Las contraseñas no coinciden";
+            hayError = true;
         }
 
-        if (!pass) {
-            if (errorEl) errorEl.textContent = "La contraseña es obligatoria.";
-            return;
+        if (!hayError) {
+            localStorage.setItem("userEmail", email);
+            registerForm.submit();
         }
-
-        if (pass.length < 6) {
-            if (errorEl) errorEl.textContent = "La contraseña debe tener al menos 6 caracteres.";
-            return;
-        }
-
-        if (pass !== pass2) {
-            if (errorEl) errorEl.textContent = "Las contraseñas no coinciden.";
-            return;
-        }
-
-        window.location.href = "./login.html";
     });
 });

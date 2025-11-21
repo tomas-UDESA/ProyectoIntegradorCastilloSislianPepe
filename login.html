@@ -21,24 +21,29 @@
          </nav>
     </header>
 
-    <section class="usersec">
-        <form action="./index.html" method="get" class="form_user" novalidate>
-            <h1>Ingrese su sesion.</h1>
-            <div>
-                <label for="email">Escriba su email:</label>
-                <input class="inputregi" type="email" id="email" name="email" placeholder="Escriba un mail existente">
-            </div>
-            <div>
-                <label for="contraseña">Escriba su contraseña</label>
-                <input class="inputregi" type="password" id="contraseña" name="contraseña" placeholder="Escriba su contraseña">
-            </div>
-            <p class="errorlogin" id="login-error"></p>
-            <div>
-                <button class="buttonregi" type="submit">Ingresar</button>
-            </div>
-            <a href="./register.html" class="acolor">No tengo cuenta</a>
-        </form>
-    </section>
+ <section class="usersec">
+    <form action="./index.html" method="get" class="form_user" id="loginForm" novalidate>
+        <h1>Ingrese su sesion.</h1>
+
+        <div>
+            <label for="email">Escriba su email:</label>
+            <input class="inputregi" type="email" id="email" name="email" placeholder="Escriba un mail existente">
+        </div>
+        <p class="errorlogin" id="errorEmail"></p>
+
+        <div>
+            <label for="contraseña">Escriba su contraseña</label>
+            <input class="inputregi" type="password" id="contraseña" name="contraseña" placeholder="Escriba su contraseña">
+        </div>
+        <p class="errorlogin" id="errorPassword"></p>
+
+        <div>
+            <button class="buttonregi" type="submit">Ingresar</button>
+        </div>
+        
+        <a href="./register.html" class="acolor">No tengo cuenta</a>
+    </form>
+ </section>
 
     <footer>
         <ul class="footul">
