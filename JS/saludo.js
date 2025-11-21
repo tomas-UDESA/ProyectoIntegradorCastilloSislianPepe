@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let saludo = document.querySelector(".saludo");
     let logOut = document.querySelector(".logOut");
 
-    if (email === null || email === "") {
+    if (email === null) {
+        sinEmail.style.display = "block";
+        conEmail.style.display = "none";
+    } else if (email === "") {
         sinEmail.style.display = "block";
         conEmail.style.display = "none";
     } else {
