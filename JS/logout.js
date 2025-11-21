@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let sinEmail = document.getElementById("sinEmail");
-    let conEmail = document.getElementById("conEmail");
-    let logOut = document.getElementById("logOut");
+    let sinEmail = document.querySelector(".sinEmail");
+    let conEmail = document.querySelector(".conEmail");
+    let logOut = document.querySelector(".logOut");
 
     logOut.addEventListener("click", function () {
         localStorage.removeItem("userEmail");

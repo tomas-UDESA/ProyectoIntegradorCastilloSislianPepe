@@ -9,19 +9,19 @@
 <body>
      <header class="headindex">
          <a href="./index.html"><img src="./img/logo.png" alt="logohead" class="logo"></a>
-         <form action="./search-results.html" method="GET" class="searchbarform">
-            <input type="text" name="buscar" placeholder="Buscar..." required class="searchbar">
-            <button class="indbutton" type="submit">Buscar</button>
+         <form id="searchForm" action="./search-results.html" method="get" class="searchbarform">
+            <input type="text" id="searchbar" name="buscar" class="searchbar" placeholder="Buscar...">
+            <button class="indbutton" type="submit" class="buttonsearch">Buscar</button>
          </form>
-         <nav id="sinEmail">
+         <nav class="sinEmail">
             <ul class="user">
             <li><a href="./login.html" class="userlog">LogIn</a></li>
             <li><a href="./register.html" class="userlog">Register</a></li>
             </ul>
          </nav>
-         <div id="conEmail">
-            <p class="userlog" id="saludo"></p>
-            <p class="userlog" id="logOut">Logout</p>
+         <div class="conEmail">
+            <p class="userlog saludo"></p>
+            <p class="userlog logOut">Logout</p>
          </div>
     </header>
 <div class="categorysec">
@@ -194,6 +194,7 @@
         </ul>
     </footer>
     <script src="./JS/index.js"></script>
+    <script src="./JS/search-results.js"></script>
     <script src="./JS/saludo.js"></script>
     <script src="./JS/logout.js"></script>
 </body>

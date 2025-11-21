@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let loginForm = document.getElementById("loginForm");
-    let emailInput = document.getElementById("email");
-    let passwordInput = document.getElementById("contraseña");
-    let errorEmail = document.getElementById("errorEmail");
-    let errorPassword = document.getElementById("errorPassword");
+    let loginForm = document.querySelector(".loginForm");
+    let emailInput = document.querySelector(".email");
+    let passwordInput = document.querySelector(".contraseña");
+    let errorEmail = document.querySelector(".errorEmail");
+    let errorPassword = document.querySelector(".errorPassword");
 
     loginForm.addEventListener("submit", function (event) {
         let email = emailInput.value.trim();
