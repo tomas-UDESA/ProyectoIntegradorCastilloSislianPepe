@@ -20,18 +20,6 @@ if (formulario && campoBusqueda) {
     };
 }
 
-
-let secciones = document.querySelectorAll(".categoriasindex");
-
-if (secciones.length >= 2) {
-
-    let primeraSeccion = secciones[0];
-    let segundaSeccion = secciones[1];
-
-    primeraSeccion.innerHTML = "";
-    segundaSeccion.innerHTML = "";
-
-
     fetch("https://dummyjson.com/products/category/smartphones")
         .then(function (res) {
             return res.json();
@@ -44,13 +32,13 @@ if (secciones.length >= 2) {
                 let p = productos[i];
 
                 let tarjeta =
-                    '<div class="divcate">' +
-                        '<img src="' + p.thumbnail + '" alt="' + p.title + '" class="produim">' +
-                        '<p class="produtit">' + p.title + '</p>' +
-                        '<p class="produdes">' + p.description + '</p>' +
-                        '<p class="produprec">$' + p.price + '</p>' +
-                        '<a href="./product.html?id=${producto.id}" class="produinfo">Ver detalle.</a>' +
-                    '</div>';
+                    `<div class="divcate"> 
+                        <img src="${p.thumbnail}" alt="'  p.title  '" class="produim">
+                        <p class="produtit">${p.title}  </p>
+                        <p class="produdes">${p.description} </p>
+                        <p class="produprec">${p.price} </p> 
+                        <a href"./product.html?id=${p.id}" class="produinfo">Ver detalle.</a> 
+                    </div>`;
 
                 primeraSeccion.innerHTML += tarjeta;
             }
@@ -72,18 +60,17 @@ if (secciones.length >= 2) {
                 let p = productos[i];
 
                 let tarjeta =
-                    '<div class="divcate">' +
-                        '<img src="' + p.thumbnail + '" alt="' + p.title + '" class="produim">' +
-                        '<p class="produtit">' + p.title + '</p>' +
-                        '<p class="produdes">' + p.description + '</p>' +
-                        '<p class="produprec">$' + p.price + '</p>' +
-                        '<a href="./product.html?id=${producto.id}" class="produinfo">Ver detalle.</a>' +
-                    '</div>';
+                    `<div class="divcate">' +
+                        <img src="${p.thumbnail}" alt="' ${p.title}  '" class="produim"> 
+                        <p class="produtit">${p.title}</p>
+                        <p class="produdes">${p.description}</p>
+                        <p class="produprec">${p.price}</p> 
+                        <a href="./product.html?id=${producto.id}" class="produinfo">Ver detalle.</a>
+                    </div>`;
 
-                segundaSeccion.innerHTML += tarjeta;
+segundaSeccion.innerHTML += tarjeta;
             }
         })
         .catch(function (error) {
             console.log("Error en segunda sección:", error);
         });
-}
