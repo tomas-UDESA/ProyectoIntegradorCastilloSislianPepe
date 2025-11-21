@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let registerForm = document.getElementById("registerForm");
+    let registerForm = document.querySelector(".registerForm");
 
-    let emailInput = document.getElementById("reg-email");
-    let passwordInput = document.getElementById("reg-password");
-    let password2Input = document.getElementById("reg-password2");
-    let termsInput = document.getElementById("reg-terms");
+    let emailInput = document.querySelector(".reg-email");
+    let passwordInput = document.querySelector(".reg-password");
+    let password2Input = document.querySelector(".reg-password2");
+    let termsInput = document.querySelector(".reg-terms");
 
-    let errorEmail = document.getElementById("errorEmail");
-    let errorPassword = document.getElementById("errorPassword");
-    let errorPassword2 = document.getElementById("errorPassword2");
-    let errorTerms = document.getElementById("errorTerms");
+    let errorEmail = document.querySelector(".errorEmail");
+    let errorPassword = document.querySelector(".errorPassword");
+    let errorPassword2 = document.querySelector(".errorPassword2");
+    let errorTerms = document.querySelector(".errorTerms");
 
     registerForm.addEventListener("submit", function (event) {
         event.preventDefault();

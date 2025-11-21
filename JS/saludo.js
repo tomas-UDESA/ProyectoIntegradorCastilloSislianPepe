@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     let email = localStorage.getItem("userEmail");
 
-    let sinEmail = document.getElementById("sinEmail");
-    let conEmail = document.getElementById("conEmail");
-    let saludo = document.getElementById("saludo");
-    let logOut = document.getElementById("logOut");
+    let sinEmail = document.querySelector(".sinEmail");
+    let conEmail = document.querySelector(".conEmail");
+    let saludo = document.querySelector(".saludo");
+    let logOut = document.querySelector(".logOut");
 
     if (email === null || email === "") {
         sinEmail.style.display = "block";
