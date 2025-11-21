@@ -24,19 +24,41 @@ const coments = document.querySelector("#reviews-container")
             categoria.textContent = data.category
             stock.textContent = data.stock
             etiquetas.textContent = data.tags
-            coments.textContent = data.reviews
-    
+        
+            coments.textContent = "";
 
-            
-            
-            
+        for (let i = 0; i < data.reviews.length; i++) {
+            let review = data.reviews[i];
+            coments.textContent += review.reviewerName + ": " + review.comment + "  ";
+        }
+    })
 
-        })
+
         .catch(function (error) {
             console.log("Se detectó un error", error);
         });
     
-    
+let categorias = document.querySelector(".categoryul");
+
+fetch("https://dummyjson.com/products/categories")
+  .then(function(res) {
+    return res.json();
+  })
+  .then(function(data) {
+    let categoriasApi = '';
+
+    for (let i = 0; i < data.length; i++) {
+      categoriasApi += `<li><a href="./category.html?name=${data[i].slug}">${data[i].name}</a></li>`;
+    }
+
+    categorias.innerHTML = categoriasApi;
+  })
+  .catch(function(error) {
+    console.log("Error: " + error);
+  });
+
+
+
 
 
 

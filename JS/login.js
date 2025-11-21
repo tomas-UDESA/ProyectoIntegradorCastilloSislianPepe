@@ -31,4 +31,4 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("userEmail", email);
         }
     });
-});
+});``
